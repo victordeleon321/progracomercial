@@ -1,6 +1,6 @@
 {% extends 'blog/base.html' %}
+
     {% block content %}
-          {% for p in pubs %}
         <div class="post">
           <div class="date">
         <p> publicado: {{ p.fecha_publicacion }} </p>
@@ -8,5 +8,4 @@
         <h1><a href="{% url 'detalle_pub' pk=p.pk %}">{{ p.titulo }}</a></h1
         <p>{{ p.texto|linebreaksbr }} </p>
         </div>
-    {% endfor %}
   {% endblock %}
